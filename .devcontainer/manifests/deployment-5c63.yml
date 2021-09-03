@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "cisamples-5c63"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "cisamples-5c63"
+  template:
+    metadata:
+      labels:
+        app: "cisamples-5c63"
+    spec:
+      containers:
+        - name: "cisamples-5c63"
+          image: "cisamplesmasteracr.azurecr.io/cisamples5c63"
+          ports:
+          - containerPort: 5000

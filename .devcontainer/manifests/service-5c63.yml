@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "cisamples-5c63"
+    labels:
+        app: "cisamples-5c63"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP
+      name: http
+    selector:
+        app: "cisamples-5c63"
